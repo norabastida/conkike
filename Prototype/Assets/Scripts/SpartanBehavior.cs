@@ -1,21 +1,23 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class SpartanBehavior : MonoBehaviour {
-	enum States {idle,walk,rotate,run,attack};
+	enum States {idle,walk,rotate,run,attack,end};
 	private States myState;
 	private Vector3 destiny;
 	private Quaternion direction;
 	private float walkVelocity = 4f;
 	private float rotationVelocity = 10f;
 	
+	bool isActive;
+	public event EventHandler turnPlayed;
+	
 
 	// Use this for initialization
 	void Start () {
 			myState = States.idle;
 			transform.animation.wrapMode = WrapMode.Loop;
-				
-
 	}
 	
 	// Update is called once per frame
@@ -46,6 +48,7 @@ public class SpartanBehavior : MonoBehaviour {
 			if (!animation.isPlaying)
 			{
 				myState = States.idle;
+				this.turnEnded();
 			}
 
 		}
@@ -94,6 +97,17 @@ public class SpartanBehavior : MonoBehaviour {
 				col.gameObject.GetComponent<skeletonBehavior>().getHit(5);
 			}
 		}
+	}
+	
+	public void setActive(bool _isActive)
+	{
+		this.isActive = _isActive;
+	}
+	
+	public void turnEnded()
+	{
+		turnPlayed(this.gameObject,EventArgs.Empty);
+		isActive = false;
 	}
 }
 

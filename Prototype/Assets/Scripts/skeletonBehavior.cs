@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class skeletonBehavior : MonoBehaviour {
@@ -40,6 +41,16 @@ public class skeletonBehavior : MonoBehaviour {
 			}
 			
 		}
+	}
+	public void setActive(bool _isActive)
+	{
+		this.isActive = _isActive;
+	}
+	
+	public void turnEnded()
+	{
+		turnPlayed(this.gameObject,EventArgs.Empty);
+		isActive = false;
 	}
 
 }
