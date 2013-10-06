@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameController.cs">
+    <Files>
+      <File FileName="Assets\SpartanBehavior.cs" Line="94" Column="53" />
+      <File FileName="Assets\HandBehaviourScript.cs" Line="22" Column="6" />
+      <File FileName="Assets\skeletonBehavior.cs" Line="38" Column="56" />
+      <File FileName="Assets\GameController.cs" Line="24" Column="39" />
+      <File FileName="Assets\MouseBehavior.cs" Line="8" Column="29" />
+      <File FileName="Assets\MapBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\RoundTextBehavior.cs" Line="19" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
